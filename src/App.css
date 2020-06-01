@@ -1,38 +1,136 @@
-.App {
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css?family=Rokkitt|Yeon+Sung&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+
+body { 
+  margin: 0; 
+  font-family: 'Rokkitt', cursive !important; 
+  font-size: 1.05em !important;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.home-wrapper{
+  background: url(./Assets/bg.jpg) center center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+.overlay{
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.login-container{
+  padding: 140px 30px;
+}
+
+.login-content{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.center-content{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.right-content{
+  text-align: right;
+}
+.filter-input{
+  width: 200px;
+  margin-bottom: 5px;
+}
+th{
+  cursor: pointer;
+}
+th:hover {
+  background-color: aliceblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.side-nav{
+  background-color: darkslategray;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-top: 60px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link{
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.nav-link:hover{
+  color: lightblue;
+  transform: scale(1.1);
+}
+.nav-link .fa, .nav-link .fas{
+  margin-right: 8px;
+}
+.nav-icon{
+  border: 1.2px solid white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.4em;
+  margin-bottom: 80px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-container{
+  padding: 80px 40px;
+}
+
+.dashboard-content{
+  max-height: 100vh;
+  overflow-y: auto;
+  background: linear-gradient(-45deg, aliceblue, white, white, aliceblue);
+}
+.btn-light{
+  padding: 4px 8px;
+  margin: 0px 5px;
+}
+
+form .btn-light{
+  border: 1px solid gray;
+}
+.btn-light:hover{
+  border: 1px solid gray;
+}
+.modal-wrapper{
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+.custom-modal{
+  position: absolute;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  background: white;
+  width: 550px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.custom-modal-header{
+  padding: 10px;
+  padding-top: 15px;
+  background: lightgrey;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.custom-modal-body{
+  padding: 25px 45px;
+}
+.fa-times-circle{
+  cursor: pointer;
+  font-size: 0.8em;
 }
