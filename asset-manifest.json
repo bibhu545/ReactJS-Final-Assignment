@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ReactJS-Final-Assignment/static/css/main.e5ad7150.chunk.css",
+    "main.js": "/ReactJS-Final-Assignment/static/js/main.d0f5f05e.chunk.js",
+    "main.js.map": "/ReactJS-Final-Assignment/static/js/main.d0f5f05e.chunk.js.map",
+    "runtime-main.js": "/ReactJS-Final-Assignment/static/js/runtime-main.38a18b25.js",
+    "runtime-main.js.map": "/ReactJS-Final-Assignment/static/js/runtime-main.38a18b25.js.map",
+    "static/js/2.68176bbc.chunk.js": "/ReactJS-Final-Assignment/static/js/2.68176bbc.chunk.js",
+    "static/js/2.68176bbc.chunk.js.map": "/ReactJS-Final-Assignment/static/js/2.68176bbc.chunk.js.map",
+    "index.html": "/ReactJS-Final-Assignment/index.html",
+    "precache-manifest.054d88185063440fdd3c8c217050311e.js": "/ReactJS-Final-Assignment/precache-manifest.054d88185063440fdd3c8c217050311e.js",
+    "service-worker.js": "/ReactJS-Final-Assignment/service-worker.js",
+    "static/css/main.e5ad7150.chunk.css.map": "/ReactJS-Final-Assignment/static/css/main.e5ad7150.chunk.css.map",
+    "static/js/2.68176bbc.chunk.js.LICENSE.txt": "/ReactJS-Final-Assignment/static/js/2.68176bbc.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/ReactJS-Final-Assignment/static/media/bg.83b402fa.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.38a18b25.js",
+    "static/js/2.68176bbc.chunk.js",
+    "static/css/main.e5ad7150.chunk.css",
+    "static/js/main.d0f5f05e.chunk.js"
+  ]
+}
