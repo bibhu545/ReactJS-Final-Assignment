@@ -145,7 +145,7 @@ function FuelReport(props) {
                                     <form onSubmit={createTransaction}>
                                         <div className="form-group">
                                             <label htmlFor="airportId">Airport:</label>
-                                            <select className="form-control" id="airportId" name="airportId" value={transaction.airportId} onChange={setTransactionValues} >
+                                            <select required className="form-control" id="airportId" name="airportId" value={transaction.airportId} onChange={setTransactionValues} >
                                                 <option value="">Select</option>
                                                 {
                                                     props.airports.map((item, index) =>
@@ -156,7 +156,7 @@ function FuelReport(props) {
                                         </div>
                                         <div className="form-group">
                                             <label htmlFor="transactionType">Transaction Type:</label>
-                                            <select className="form-control" id="transactionType" name="transactionType" value={transaction.transactionType} onChange={setTransactionValues}>
+                                            <select required className="form-control" id="transactionType" name="transactionType" value={transaction.transactionType} onChange={setTransactionValues}>
                                                 <option value="">Select</option>
                                                 <option value="IN">IN</option>
                                                 <option value="OUT">OUT</option>
@@ -166,7 +166,7 @@ function FuelReport(props) {
                                             transaction.transactionType === "OUT" ?
                                                 <div className="form-group">
                                                     <label htmlFor="aircraftId">Air Craft:</label>
-                                                    <select className="form-control" id="airCraftId" name="airCraftId" value={transaction.airCraftId} onChange={setTransactionValues} >
+                                                    <select required className="form-control" id="airCraftId" name="airCraftId" value={transaction.airCraftId} onChange={setTransactionValues} >
                                                         <option value="">Select</option>
                                                         {
                                                             props.aircrafts.map((item, index) =>
@@ -179,7 +179,7 @@ function FuelReport(props) {
                                         }
                                         <div className="form-group">
                                             <label htmlFor="quantity">Quantity: </label>
-                                            <input type="number" className="form-control" id="quantity" name="quantity" value={transaction.quantity} onChange={setTransactionValues} />
+                                            <input required type="number" className="form-control" id="quantity" name="quantity" value={transaction.quantity} onChange={setTransactionValues} />
                                         </div>
                                         <div className="center-content">
                                             <button type="submit" className="btn btn-light">Submit</button>

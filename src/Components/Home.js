@@ -19,7 +19,7 @@ function Home(props) {
         e.preventDefault();
         if (USERS.findIndex(item => item.email === user.email && item.password === user.password) >= 0) {
             sessionStorage.setItem("loggedIn", true);
-            window.location = "/dashboard";
+            window.location = "dashboard";
         }
         else {
             new Utils().showErrorMessage("Invalid Username or Password.");

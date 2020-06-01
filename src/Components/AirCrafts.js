@@ -72,11 +72,11 @@ function AirCrafts(props) {
                                 <form onSubmit={createAircraft}>
                                     <div className="form-group">
                                         <label htmlFor="airCraftNo">Aircraft No:</label>
-                                        <input id="airCraftNo" name="airCraftNo" className="form-control" value={aircraft.airCraftNo} onChange={onAircraftValueChanged} />
+                                        <input required id="airCraftNo" name="airCraftNo" className="form-control" value={aircraft.airCraftNo} onChange={onAircraftValueChanged} />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="airline">AirCraft Id: </label>
-                                        <input type="text" className="form-control" id="airline" name="airline" value={aircraft.airline} onChange={onAircraftValueChanged} />
+                                        <input required type="text" className="form-control" id="airline" name="airline" value={aircraft.airline} onChange={onAircraftValueChanged} />
                                     </div>
                                     <div className="center-content">
                                         <button type="submit" className="btn btn-light">Submit</button>

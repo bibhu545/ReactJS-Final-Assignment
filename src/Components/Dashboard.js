@@ -16,7 +16,7 @@ export class Dashboard extends Component {
 
     componentDidMount() {
         if (sessionStorage.getItem("loggedIn") !== "true") {
-            window.location = "/";
+            window.location = "home";
         }
     }
 

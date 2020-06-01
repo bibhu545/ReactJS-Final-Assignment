@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Airport, FuelAction } from '../Utils/Models';
 import { addAirport, createTransactionFromAirport } from '../Redux/Actions';
 import withCommonHOC from '../Utils/withCommonHOC';
+import { Utils } from '../Utils/Utils';
 
 function Airports(props) {
 
@@ -53,9 +54,14 @@ function Airports(props) {
 
     const createTransaction = (e) => {
         e.preventDefault();
-        props.createTransactionFromAirport(airport, fuelAction);
-        setFuelAction(new FuelAction());
-        setShowTransactionModal(false);
+        if (airport.fuelAvailable < fuelAction.amount) {
+            new Utils().showErrorMessage("Required Fuel is more than Available.");
+        }
+        else {
+            props.createTransactionFromAirport(airport, fuelAction);
+            setFuelAction(new FuelAction());
+            setShowTransactionModal(false);
+        }
     }
 
     return (
@@ -112,15 +118,15 @@ function Airports(props) {
                                 <form onSubmit={createAirport}>
                                     <div className="form-group">
                                         <label htmlFor="airportName">Airport Name:</label>
-                                        <input id="airportName" name="airportName" className="form-control" value={airport.airportName} onChange={onAirportValueChanged} />
+                                        <input required id="airportName" name="airportName" className="form-control" value={airport.airportName} onChange={onAirportValueChanged} />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="fuelCapacity">Capacity: </label>
-                                        <input type="number" className="form-control" id="fuelCapacity" name="fuelCapacity" value={airport.fuelCapacity} onChange={onAirportValueChanged} />
+                                        <input required type="number" className="form-control" id="fuelCapacity" name="fuelCapacity" value={airport.fuelCapacity} onChange={onAirportValueChanged} />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="fuelAvailable">Available Fuel: </label>
-                                        <input type="number" className="form-control" id="fuelAvailable" name="fuelAvailable" value={airport.fuelAvailable} onChange={onAirportValueChanged} />
+                                        <input required type="number" className="form-control" id="fuelAvailable" name="fuelAvailable" value={airport.fuelAvailable} onChange={onAirportValueChanged} />
                                     </div>
                                     <div className="center-content">
                                         <button type="submit" className="btn btn-light">Submit</button>
