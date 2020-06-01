@@ -40,10 +40,10 @@ export const createTransactionFromAirport = (airportData, fuelActionData) => {
 export const handleTransactionFromAirport = (airports, airportData, fuelActionData) => {
     let itemIndex = airports.findIndex((item => item.airportId === airportData.airportId));
     if (fuelActionData.addMode) {
-        airports[itemIndex].fuelAvailable += parseInt(fuelActionData.amount);
+        airports[itemIndex].fuelAvailable = parseInt(airports[itemIndex].fuelAvailable) + parseInt(fuelActionData.amount);
     }
     else {
-        airports[itemIndex].fuelAvailable -= parseInt(fuelActionData.amount);
+        airports[itemIndex].fuelAvailable = parseInt(airports[itemIndex].fuelAvailable) - parseInt(fuelActionData.amount);
     }
     let transaction = new Transaction();
     transaction.transactionType = fuelActionData.addMode ? "IN" : "OUT";

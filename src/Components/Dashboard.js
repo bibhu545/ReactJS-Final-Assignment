@@ -14,6 +14,12 @@ export class Dashboard extends Component {
         }
     }
 
+    componentDidMount() {
+        if (sessionStorage.getItem("loggedIn") !== "true") {
+            window.location = "/";
+        }
+    }
+
     getComponent(component) {
         switch (component) {
             case "airports":
@@ -30,6 +36,7 @@ export class Dashboard extends Component {
     }
 
     logout() {
+        sessionStorage.setItem("loggedIn", false);
         window.location = '/';
     }
 
@@ -65,7 +72,7 @@ export class Dashboard extends Component {
                             </div>
                         </span>
                         <span className="nav-link" onClick={this.logout}>
-                        <div className="row">
+                            <div className="row">
                                 <div className="col-2"><i className="fas fa-sign-out-alt"></i></div>
                                 <div className="col-10">Logout</div>
                             </div>

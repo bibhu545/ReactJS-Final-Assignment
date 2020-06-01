@@ -18,6 +18,7 @@ function Home(props) {
     const login = (e) => {
         e.preventDefault();
         if (USERS.findIndex(item => item.email === user.email && item.password === user.password) >= 0) {
+            sessionStorage.setItem("loggedIn", true);
             window.location = "/dashboard";
         }
         else {

@@ -75,7 +75,7 @@ function AirCrafts(props) {
                                         <input id="airCraftNo" name="airCraftNo" className="form-control" value={aircraft.airCraftNo} onChange={onAircraftValueChanged} />
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="airline">Capacity: </label>
+                                        <label htmlFor="airline">AirCraft Id: </label>
                                         <input type="text" className="form-control" id="airline" name="airline" value={aircraft.airline} onChange={onAircraftValueChanged} />
                                     </div>
                                     <div className="center-content">
